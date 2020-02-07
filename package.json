@@ -7,7 +7,8 @@
     "build": "tsc",
     "dev": "ts-node ./lib/server.ts",
     "start": "nodemon ./dist/server.js",
-    "prod": "npm run build && npm run start"
+    "prod": "npm run build && npm run start",
+    "test": "jest --verbose --runInBand --watch "
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +18,16 @@
     "express": "^4.17.1",
     "mongoose": "^5.8.3",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/jest": "^25.1.1",
+    "@types/joi": "^14.3.4",
+    "@types/jsonwebtoken": "^8.3.7",
+    "@types/supertest": "^2.0.8",
+    "jest": "^25.1.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.1.0",
+    "typescript": "^3.2.2"
   }
 }

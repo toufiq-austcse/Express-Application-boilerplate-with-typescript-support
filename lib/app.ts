@@ -2,7 +2,8 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import {Routes} from "./routes/crmRoutes";
 import * as mongoose from "mongoose";
-
+import CustomMiddleware from "./middlewares/response.middleware";
+import errorMiddleware from "./middlewares/error.middleware";
 class App {
 
     public app: express.Application;
@@ -14,6 +15,7 @@ class App {
         this.config();
         this.routePrv.routes(this.app);
         this.mongoSetup();
+        this.initializeMiddlewares();
     }
 
     private config(): void {
@@ -26,6 +28,11 @@ class App {
     private mongoSetup(): void {
         mongoose.Promise = global.Promise;
         mongoose.connect(this.mongoUrl);
+    }
+
+    private initializeMiddlewares(){
+        this.app.use(CustomMiddleware);
+        this.app.use(errorMiddleware);
     }
 
 }
