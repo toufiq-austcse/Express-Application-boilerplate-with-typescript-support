@@ -14,7 +14,7 @@ class App {
         this.app = express();
         this.config();
         this.routePrv.routes(this.app);
-        this.mongoSetup();
+       // this.mongoSetup();
         this.initializeMiddlewares();
     }
 
