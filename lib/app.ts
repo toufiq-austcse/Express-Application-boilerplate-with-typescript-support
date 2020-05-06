@@ -1,10 +1,11 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import {Routes} from "./routes/crmRoutes";
-import * as mongoose from "mongoose";
+import {Routes} from "./routes/Routes";
 import CustomMiddleware from "./middlewares/response.middleware";
 import errorMiddleware from "./middlewares/error.middleware";
 import {connectToDatabase} from "./config/database";
+import {configCors} from "./config/cors.config";
+
 class App {
 
     public app: express.Application;
@@ -13,9 +14,10 @@ class App {
     constructor() {
         this.app = express();
         this.config();
+        configCors(this.app);
         this.routePrv.routes(this.app);
         connectToDatabase(this.app);
-        this.initializeMiddlewares();
+        this.initializeMiddleware();
     }
 
     private config(): void {
@@ -25,12 +27,8 @@ class App {
         this.app.use(bodyParser.urlencoded({extended: false}));
     }
 
-    // private mongoSetup(): void {
-    //     mongoose.Promise = global.Promise;
-    //     mongoose.connect(this.mongoUrl);
-    // }
 
-    private initializeMiddlewares(){
+    private initializeMiddleware() {
         this.app.use(CustomMiddleware);
         this.app.use(errorMiddleware);
     }
