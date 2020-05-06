@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import {Routes} from "./routes/Routes";
+import {Routes} from "./routes/v1/Routes";
 import CustomMiddleware from "./middlewares/response.middleware";
 import errorMiddleware from "./middlewares/error.middleware";
 import {connectToDatabase} from "./config/database";

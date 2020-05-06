@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fdf2990-90c7-48ba-bbbc-20f0a4d8cecd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/config/cors.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/repositories/UserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/repositories/repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/services/UserService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/crmController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/inversify.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/inversify.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/log.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/crmModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/crmRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/v1/Routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\shortly\lib\routes\v1" />
       <recent name="E:\shortly\lib\config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -78,7 +67,7 @@
       <workItem from="1577989380676" duration="2140000" />
       <workItem from="1580329275397" duration="30000" />
       <workItem from="1581069632015" duration="765000" />
-      <workItem from="1588732664768" duration="16121000" />
+      <workItem from="1588732664768" duration="19221000" />
     </task>
     <servers />
   </component>
