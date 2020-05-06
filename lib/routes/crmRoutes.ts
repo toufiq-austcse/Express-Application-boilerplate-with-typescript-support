@@ -2,7 +2,7 @@ import {NextFunction, Request, Response} from 'express'
 import {ContactController} from "../controllers/crmController";
 
 export class Routes {
-    public contactController: ContactController = new ContactController();
+  //  public contactController: ContactController = new ContactController();
 
     public routes(app): void {
         app.route('/')
@@ -12,25 +12,25 @@ export class Routes {
                 })
             });
 
-        // Contact
-        app.route('/contact')
-        // GET endpoint
-            .get((req: Request, res: Response, next: NextFunction) => {
-                //Middleware
-                if (req.params.publickey != 'sady') {
-                    res.status(401).send('You shall not pass!');
-                } else {
-                    next();
-                }
-            }, this.contactController.getContacts)
-            // POST endpoint
-            .post(this.contactController.addNewContact);
-
-        // Contact detail
-        app.route('/contact/:contactId')
-        // get specific contact
-            .get(this.contactController.getContactWithID)
-            .put(this.contactController.updateContact)
-            .delete(this.contactController.deleteContact)
+        // // Contact
+        // app.route('/contact')
+        // // GET endpoint
+        //     .get((req: Request, res: Response, next: NextFunction) => {
+        //         //Middleware
+        //         if (req.params.publickey != 'sady') {
+        //             res.status(401).send('You shall not pass!');
+        //         } else {
+        //             next();
+        //         }
+        //     }, this.contactController.getContacts)
+        //     // POST endpoint
+        //     .post(this.contactController.addNewContact);
+        //
+        // // Contact detail
+        // app.route('/contact/:contactId')
+        // // get specific contact
+        //     .get(this.contactController.getContactWithID)
+        //     .put(this.contactController.updateContact)
+        //     .delete(this.contactController.deleteContact)
     }
 }
