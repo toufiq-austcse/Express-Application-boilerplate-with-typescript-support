@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fdf2990-90c7-48ba-bbbc-20f0a4d8cecd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/services/HashService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/services/JwtService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/inversify.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/inversify.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/database.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/middlewares/response.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middlewares/response.middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/UserRepository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/UserRepository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/base/repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/UserService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -91,7 +86,7 @@
       <workItem from="1580329275397" duration="30000" />
       <workItem from="1581069632015" duration="765000" />
       <workItem from="1588732664768" duration="19292000" />
-      <workItem from="1588814309517" duration="6789000" />
+      <workItem from="1588814309517" duration="10331000" />
     </task>
     <servers />
   </component>

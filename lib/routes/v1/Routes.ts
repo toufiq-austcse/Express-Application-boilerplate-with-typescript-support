@@ -3,7 +3,7 @@ import {UserController} from "../../controllers/UserController";
 
 
 export class Routes {
-    private BASE_URL = '/api/v1'
+    private BASE_URL = '/api/v1';
 
     public routes(app): void {
         app.route('/')
@@ -14,7 +14,7 @@ export class Routes {
             });
 
         // User
-        app.route(this.BASE_URL+'/user')
+        app.route(this.BASE_URL+'/user/signup')
             .post(UserController.createUser);
 
 

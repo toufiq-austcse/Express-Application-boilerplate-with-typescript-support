@@ -45,7 +45,7 @@ function getDatabaseOptions(): mongoose.ConnectionOptions {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    autoIndex
+    useCreateIndex:true
   };
 }
 

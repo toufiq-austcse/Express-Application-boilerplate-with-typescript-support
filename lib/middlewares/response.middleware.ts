@@ -17,4 +17,4 @@ function CustomMiddleware(myData:CustomResponse,request: Request, response: Resp
         })
 }
 
-export default CustomMiddleware
+export default CustomMiddleware;
