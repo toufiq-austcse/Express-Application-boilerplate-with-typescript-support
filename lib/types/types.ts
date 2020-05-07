@@ -3,6 +3,8 @@
 const TYPES = {
     UserRepository: Symbol.for("UserRepository"),
     UserModel: Symbol.for("UserModel"),
-}
+    HashService: Symbol.for('HashService'),
+    JwtService: Symbol.for('JwtService')
+};
 
-export { TYPES };
+export {TYPES};

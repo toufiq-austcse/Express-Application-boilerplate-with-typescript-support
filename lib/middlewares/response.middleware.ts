@@ -3,7 +3,7 @@ import {NextFunction, Request, Response} from "express";
 
 function CustomMiddleware(myData:CustomResponse,request: Request, response: Response, next: NextFunction) {
     const code = myData.code || 500;
-    const message = myData.message || 'Something went wrong';
+    const message = myData.message;
     const {status,data} = myData;
     // console.log(status,data);
     // console.log(myData);

@@ -1,7 +1,8 @@
 import * as mongoose from 'mongoose';
-import {Document, model} from "mongoose";
+import {Document, model} from 'mongoose';
 
 export interface User {
+  //  _id: mongoose.Types.ObjectId;
     firstName?: string;
     lastName?: string;
     email?: string;
@@ -9,7 +10,9 @@ export interface User {
     createdAt?: Date;
     updatedAt?: Date;
 }
-export interface UserDocument extends User, Document {}
+
+export interface UserDocument extends User, Document {
+}
 
 const Schema = mongoose.Schema;
 
@@ -24,7 +27,7 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        unique:true,
+        unique: true,
         required: true
     },
 
