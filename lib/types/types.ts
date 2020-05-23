@@ -4,7 +4,10 @@ const TYPES = {
     UserRepository: Symbol.for("UserRepository"),
     UserModel: Symbol.for("UserModel"),
     HashService: Symbol.for('HashService'),
-    JwtService: Symbol.for('JwtService')
+    JwtService: Symbol.for('JwtService'),
+
+    UserService:Symbol.for('UserService')
+
 };
 
 export {TYPES};

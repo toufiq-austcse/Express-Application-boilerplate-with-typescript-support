@@ -9,8 +9,10 @@
  */
 import * as jwt from 'jsonwebtoken';
 import {injectable} from "inversify";
+import {provide} from "inversify-binding-decorators";
+import {TYPES} from "../types/types";
 
-@injectable()
+@provide(TYPES.JwtService)
 export class JwtService {
     private privateKey = 'shortlyPrivateKey';
 

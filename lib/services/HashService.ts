@@ -8,9 +8,10 @@
  # Enter feature description here
  */
 import * as bcrypt from 'bcrypt';
-import {injectable} from "inversify";
+import {provide} from "inversify-binding-decorators";
+import {TYPES} from "../types/types";
 
-@injectable()
+@provide(TYPES.HashService)
 export class HashService {
     async getHashedPassword(givenPass: string): Promise<string> {
         return new Promise((resolve, reject) => {

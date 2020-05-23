@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fdf2990-90c7-48ba-bbbc-20f0a4d8cecd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/database.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/middlewares/response.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middlewares/response.middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -45,9 +43,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -55,20 +55,21 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
-    <property name="ts.external.directory.path" value="E:\shortly\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\lib" />
+      <recent name="E:\shortly\lib\repositories\base" />
+      <recent name="E:\shortly\lib\routes\v1" />
+      <recent name="E:\shortly\lib\config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\shortly\lib" />
       <recent name="E:\shortly\lib\repositories" />
       <recent name="E:\shortly" />
       <recent name="E:\node-apis-project" />
       <recent name="E:\node-apis-project\lib" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\shortly\lib\repositories\base" />
-      <recent name="E:\shortly\lib\routes\v1" />
-      <recent name="E:\shortly\lib\config" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -87,6 +88,7 @@
       <workItem from="1581069632015" duration="765000" />
       <workItem from="1588732664768" duration="19292000" />
       <workItem from="1588814309517" duration="10331000" />
+      <workItem from="1590212938255" duration="2290000" />
     </task>
     <servers />
   </component>
