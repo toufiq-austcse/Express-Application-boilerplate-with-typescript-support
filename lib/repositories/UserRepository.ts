@@ -1,13 +1,17 @@
 import {Repository} from "./base/repository";
-import {User, UserDocument} from "../models/User";
+import {User, UserDocument, UserModel} from "../models/User";
 import {inject} from "inversify";
-import {TYPES} from "../types/types";
 import {provide} from "inversify-binding-decorators";
+import {IUserRepository} from "./base/IUserRepository";
 
-@provide(TYPES.UserRepository)
-export class UserRepository extends Repository<UserDocument, User> {
-    constructor(@inject(TYPES.UserModel) UserModel: any) {
+@provide(UserRepository)
+export class UserRepository extends Repository<UserDocument, User> implements IUserRepository {
+    constructor(@inject('UserModel') UserModel: any) {
         super(UserModel);
-        // this.model = UserModel;
+
+    }
+
+    getByEmail(email: string): Promise<User[]> {
+        return super.find({email}, 1)
     }
 }

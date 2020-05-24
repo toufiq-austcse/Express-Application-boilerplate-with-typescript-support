@@ -1,22 +1,22 @@
 import 'reflect-metadata';
 import * as express from 'express';
 
-import {InversifyExpressServer } from 'inversify-express-utils';
+import {InversifyExpressServer} from 'inversify-express-utils';
 import * as bodyParser from 'body-parser';
 import CustomMiddleware from "./middlewares/response.middleware";
-import {autoProvide, buildProviderModule} from "inversify-binding-decorators";
+import {buildProviderModule} from "inversify-binding-decorators";
 import {Container} from "inversify";
 import {connectToDatabase} from "./config/database";
 import {configCors} from "./config/cors.config";
-import {UserModel} from "./models/User";
-import {TYPES} from "./types/types";
 
 
 import "./controllers/UserController";
+import models from "./models";
+
 
 // start the server
 let container = new Container();
-container.bind<any>(TYPES.UserModel).toConstantValue(UserModel)
+models.forEach(i => container.bind<any>(i.types).toConstantValue(i.model))
 container.load(buildProviderModule())
 let server = new InversifyExpressServer(container);
 

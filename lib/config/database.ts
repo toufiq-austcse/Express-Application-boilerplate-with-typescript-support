@@ -6,7 +6,7 @@ import logger from "./log";
 const DB_PASSWORD = process.env.DB_PWD || '';
 const DB_USER = process.env.DB_USER || '';
 const DB_HOST = process.env.DB_HOST || 'localhost:27017';
-let DB_NAME = process.env.DB_NAME || 'shortly';
+let DB_NAME = process.env.DB_NAME || 'demo';
 
 function getDatabaseUrl() {
   const env = Environment.NODE_ENV;

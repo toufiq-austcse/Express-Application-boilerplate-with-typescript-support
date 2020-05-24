@@ -11,7 +11,7 @@ import * as bcrypt from 'bcrypt';
 import {provide} from "inversify-binding-decorators";
 import {TYPES} from "../types/types";
 
-@provide(TYPES.HashService)
+@provide(HashService)
 export class HashService {
     async getHashedPassword(givenPass: string): Promise<string> {
         return new Promise((resolve, reject) => {

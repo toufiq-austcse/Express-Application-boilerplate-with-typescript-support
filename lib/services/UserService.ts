@@ -1,21 +1,22 @@
-import {UserRepository} from "../repositories/UserRepository";
-import {User} from "../models/User";
 import {inject} from "inversify";
-import {TYPES} from "../types/types";
 import {provide} from "inversify-binding-decorators";
+import {IUserRepository} from "../repositories/base/IUserRepository";
+import {IUserService} from "./base/IUserService";
+import {User} from "../models/User";
+import {UserRepository} from "../repositories/UserRepository";
 
-@provide(TYPES.UserService)
-export class UserService {
-    constructor(@inject(TYPES.UserRepository) private userRepository: UserRepository) {
+@provide(UserService)
+export class UserService implements IUserService {
+    constructor(@inject(UserRepository) private userRepository: IUserRepository) {
     }
 
+    //
     create(user: User): Promise<User> {
-        return this.userRepository.create(user);
+        return this.userRepository.create(user)
     }
 
-    getUsers(): User[] {
-        return [{
-            firstName: "sadi"
-        }]
+    getByEmail(email: string): Promise<User[]> {
+        return this.userRepository.getByEmail(email)
     }
+
 }

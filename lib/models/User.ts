@@ -1,12 +1,8 @@
 import * as mongoose from 'mongoose';
 import {Document, model} from 'mongoose';
-import {provide} from "inversify-binding-decorators";
-import {TYPES} from "../types/types";
 
 export interface User {
-  //  _id: mongoose.Types.ObjectId;
-    firstName?: string;
-    lastName?: string;
+    name?: string;
     email?: string;
     password?: string;
     createdAt?: Date;
@@ -19,13 +15,8 @@ export interface UserDocument extends User, Document {
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
-        type: String,
-        required: true
+    name:{
+      type:String,
     },
     email: {
         type: String,
@@ -43,3 +34,4 @@ const userSchema = new Schema({
 });
 
 export const UserModel = model<UserDocument>('User', userSchema);
+

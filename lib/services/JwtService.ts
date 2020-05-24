@@ -12,7 +12,7 @@ import {injectable} from "inversify";
 import {provide} from "inversify-binding-decorators";
 import {TYPES} from "../types/types";
 
-@provide(TYPES.JwtService)
+@provide(JwtService)
 export class JwtService {
     private privateKey = 'shortlyPrivateKey';
 

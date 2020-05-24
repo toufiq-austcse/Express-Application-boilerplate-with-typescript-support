@@ -1,20 +1,23 @@
 import 'reflect-metadata';
-import {controller, httpGet} from "inversify-express-utils";
-import CustomResponse from "../shared/CustomResponse";
+import {controller, httpPost, requestBody} from "inversify-express-utils";
 import {inject} from "inversify";
-import {TYPES} from "../types/types";
 import {UserService} from "../services/UserService";
+import {User} from "../models/User";
+import {userValidator} from "../validators/validate";
+import validate from "../validators";
 
-
-@controller('/user')
+@controller('/api/v1/user')
 export class UserController {
-    constructor(@inject(TYPES.UserService) private userService: UserService) {
+    constructor(@inject(UserService) private userService: UserService) {
     }
 
-    @httpGet('')
-    public async getUser() {
-        return new CustomResponse(200, 'OK', '', this.userService.getUsers())
+    @httpPost('', validate(userValidator))
+    public async create(@requestBody()user: User) {
+        try {
+            return user;
+        } catch (e) {
+            console.log(e)
+
+        }
     }
-
-
 }

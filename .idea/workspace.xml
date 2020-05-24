@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fdf2990-90c7-48ba-bbbc-20f0a4d8cecd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/bootstrap.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/inversify.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/base/IUserRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/base/IUserService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/validators/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/validators/validate.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bootstrap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/UserRepository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/UserRepository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/HashService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/HashService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/JwtService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/JwtService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/UserService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -55,21 +69,22 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
-    <property name="ts.external.directory.path" value="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="E:\node-with-typescript\shortly\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\lib" />
-      <recent name="E:\shortly\lib\repositories\base" />
-      <recent name="E:\shortly\lib\routes\v1" />
-      <recent name="E:\shortly\lib\config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\lib" />
       <recent name="E:\shortly\lib" />
       <recent name="E:\shortly\lib\repositories" />
       <recent name="E:\shortly" />
       <recent name="E:\node-apis-project" />
-      <recent name="E:\node-apis-project\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support" />
+      <recent name="E:\node-with-typescript\Express-Application-boilerplate-with-typescript-support\lib" />
+      <recent name="E:\shortly\lib\repositories\base" />
+      <recent name="E:\shortly\lib\routes\v1" />
+      <recent name="E:\shortly\lib\config" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -89,6 +104,11 @@
       <workItem from="1588732664768" duration="19292000" />
       <workItem from="1588814309517" duration="10331000" />
       <workItem from="1590212938255" duration="2290000" />
+      <workItem from="1590227514850" duration="9987000" />
+      <workItem from="1590251189841" duration="4050000" />
+      <workItem from="1590316667244" duration="947000" />
+      <workItem from="1590317787672" duration="191000" />
+      <workItem from="1590318642422" duration="6663000" />
     </task>
     <servers />
   </component>
@@ -113,6 +133,14 @@
       <screen x="1920" y="1" width="1920" height="1040" />
     </state>
     <state x="2728" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.1.1920.1040@1920.1.1920.1040" timestamp="1588816105535" />
+    <state x="2379" y="250" key="#com.intellij.ide.util.MemberChooser" timestamp="1590247155252">
+      <screen x="1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="2379" y="250" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.1.1920.1040@1920.1.1920.1040" timestamp="1590247155252" />
+    <state x="2304" y="281" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590230171304">
+      <screen x="1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="2304" y="281" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.1.1920.1040@1920.1.1920.1040" timestamp="1590230171304" />
     <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1588735301261">
       <screen x="1920" y="1" width="1920" height="1040" />
     </state>
