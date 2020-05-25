@@ -12,6 +12,7 @@ import {configCors} from "./config/cors.config";
 
 import "./controllers/UserController";
 import models from "./models";
+import {PORT} from "./environments";
 
 
 // start the server
@@ -33,7 +34,7 @@ server.setConfig((app) => {
 });
 
 let app = server.build();
-app.listen(8081);
-console.log('Server started on port 8081 :)');
+app.listen(PORT);
+console.log(`Server started on port ${PORT} :)`);
 
 exports = module.exports = app;
