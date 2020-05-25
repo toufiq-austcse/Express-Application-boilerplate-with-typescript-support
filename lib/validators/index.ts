@@ -1,6 +1,6 @@
 import * as joi from 'joi'
-import CustomResponse from "../shared/CustomResponse";
-import CustomMiddleware from "../middlewares/response.middleware";
+import getContent from "../shared/apiresponse";
+
 
 const validate = (schema) => {
     return (req, res, next1) => {
@@ -11,7 +11,7 @@ const validate = (schema) => {
         } else {
             const {details} = error;
             const message = details.map(i => i.message).join(',');
-            CustomMiddleware(new CustomResponse(400, '', message, []), req, res, next1)
+            res.status(400).json(getContent(400,'Bad Request',message,[]))
         }
     }
 }

@@ -3,7 +3,6 @@ import * as express from 'express';
 
 import {InversifyExpressServer} from 'inversify-express-utils';
 import * as bodyParser from 'body-parser';
-import CustomMiddleware from "./middlewares/response.middleware";
 import {buildProviderModule} from "inversify-binding-decorators";
 import {Container} from "inversify";
 import {connectToDatabase} from "./config/database";
@@ -28,9 +27,8 @@ server.setConfig((app) => {
     configCors(app);
     connectToDatabase(app);
     app.use(bodyParser.json());
-    app.use(CustomMiddleware)
     app.use('/', express.static('public'));
-    // app.use(helmet());
+
 });
 
 let app = server.build();
