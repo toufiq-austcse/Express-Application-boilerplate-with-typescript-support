@@ -9,10 +9,10 @@
  */
 import * as bcrypt from 'bcrypt';
 import {provide} from "inversify-binding-decorators";
-import {TYPES} from "../types/types";
+import {IHashService} from "./base/IHashService";
 
 @provide(HashService)
-export class HashService {
+export class HashService implements IHashService {
     async getHashedPassword(givenPass: string): Promise<string> {
         return new Promise((resolve, reject) => {
             bcrypt.hash(givenPass, 10, (err, encrypted) => {

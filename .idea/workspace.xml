@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fdf2990-90c7-48ba-bbbc-20f0a4d8cecd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/services/base/IHashService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/base/IJwtService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bootstrap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/HashService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/HashService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/JwtService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/JwtService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +96,7 @@
       <workItem from="1590251189841" duration="4050000" />
       <workItem from="1590316667244" duration="947000" />
       <workItem from="1590317787672" duration="191000" />
-      <workItem from="1590318642422" duration="7928000" />
+      <workItem from="1590318642422" duration="9312000" />
     </task>
     <servers />
   </component>

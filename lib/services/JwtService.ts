@@ -8,18 +8,15 @@
  # Enter feature description here
  */
 import * as jwt from 'jsonwebtoken';
-import {injectable} from "inversify";
 import {provide} from "inversify-binding-decorators";
-import {TYPES} from "../types/types";
+import {IJwtService} from "./base/IJwtService";
 
 @provide(JwtService)
-export class JwtService {
+export class JwtService implements IJwtService {
     private privateKey = 'shortlyPrivateKey';
 
     getToken(payload: any): string {
-        return jwt.sign(payload, this.privateKey, {
-            expiresIn: '1h'
-        });
+        return jwt.sign(payload, this.privateKey);
     }
 
     verify(token: string): any {
