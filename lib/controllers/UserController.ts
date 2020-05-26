@@ -15,6 +15,7 @@ import {AuthService} from "../services/AuthService";
 import {IAuthService} from "../services/base/IAuthService";
 import {CREATED, OK, SERVER_ERROR, UNAUTHORIZED} from "../shared/HttpStatusCodes";
 import {NextFunction} from "express";
+import {TYPES} from "../types/type";
 
 
 @controller('/api/v1/user')
@@ -56,7 +57,7 @@ export class UserController extends BaseHttpController {
         }
     }
 
-    @httpGet('', 'AuthMiddleware')
+    @httpGet('', TYPES.AuthMiddleware)
     public async getUser(@requestBody() body: any) {
         try {
             return this.json(getContent(OK, '', [{user:body.user}]), OK.code)

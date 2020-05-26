@@ -7,3 +7,6 @@ export const userValidator = joi.object().keys({
 });
 
 
+export const linkValidator = joi.object().keys({
+    url: joi.string().uri().required(),
+});

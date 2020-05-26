@@ -8,18 +8,19 @@ import {Container} from "inversify";
 import {connectToDatabase} from "./config/database";
 import {configCors} from "./config/cors.config";
 
+import "./controllers";
 
-import "./controllers/UserController";
-import models from "./models";
+import models from "./models/models";
 import {PORT} from "./environments";
 import {AuthMiddleware} from "./middlewares/auth.middleware";
+import {TYPES} from "./types/type";
 
 
 // start the server
 let container = new Container();
-container.bind<AuthMiddleware>('AuthMiddleware').to(AuthMiddleware);
+container.bind<AuthMiddleware>(TYPES.AuthMiddleware).to(AuthMiddleware);
 
-models.forEach(i => container.bind<any>(i.types).toConstantValue(i.model))
+models.forEach(i => container.bind<any>(i.type).toConstantValue(i.model))
 container.load(buildProviderModule())
 let server = new InversifyExpressServer(container);
 
