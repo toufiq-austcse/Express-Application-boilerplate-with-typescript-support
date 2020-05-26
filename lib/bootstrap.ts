@@ -12,10 +12,13 @@ import {configCors} from "./config/cors.config";
 import "./controllers/UserController";
 import models from "./models";
 import {PORT} from "./environments";
+import {AuthMiddleware} from "./middlewares/auth.middleware";
 
 
 // start the server
 let container = new Container();
+container.bind<AuthMiddleware>('AuthMiddleware').to(AuthMiddleware);
+
 models.forEach(i => container.bind<any>(i.types).toConstantValue(i.model))
 container.load(buildProviderModule())
 let server = new InversifyExpressServer(container);

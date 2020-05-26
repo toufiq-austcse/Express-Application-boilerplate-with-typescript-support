@@ -19,4 +19,9 @@ export class UserService implements IUserService {
         return this.userRepository.getByEmail(email)
     }
 
+    getByUserId(_id: string): Promise<User> {
+        return this.userRepository.getByUserId(_id);
+    }
+
+
 }

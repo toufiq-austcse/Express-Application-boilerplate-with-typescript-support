@@ -10,16 +10,16 @@
 import * as jwt from 'jsonwebtoken';
 import {provide} from "inversify-binding-decorators";
 import {IJwtService} from "./base/IJwtService";
+import {JWT_KEY} from "../environments";
 
 @provide(JwtService)
 export class JwtService implements IJwtService {
-    private privateKey = 'shortlyPrivateKey';
 
     getToken(payload: any): string {
-        return jwt.sign(payload, this.privateKey);
+        return jwt.sign(payload, JWT_KEY);
     }
 
     verify(token: string): any {
-        return jwt.verify(token, this.privateKey);
+        return jwt.verify(token, JWT_KEY);
     }
 }

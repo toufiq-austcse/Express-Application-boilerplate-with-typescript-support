@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import {BaseHttpController, controller, httpPost, requestBody} from "inversify-express-utils";
+import {BaseHttpController, controller, httpGet, httpPost, requestBody} from "inversify-express-utils";
 import {inject} from "inversify";
 import {UserService} from "../services/UserService";
 import {User} from "../models/User";
@@ -13,6 +13,9 @@ import {IJwtService} from "../services/base/IJwtService";
 import getContent from "../shared/apiresponse";
 import {AuthService} from "../services/AuthService";
 import {IAuthService} from "../services/base/IAuthService";
+import {CREATED, OK, SERVER_ERROR, UNAUTHORIZED} from "../shared/HttpStatusCodes";
+import {NextFunction} from "express";
+
 
 @controller('/api/v1/user')
 export class UserController extends BaseHttpController {
@@ -25,14 +28,14 @@ export class UserController extends BaseHttpController {
     }
 
     @httpPost('', validate(userValidator))
-    public async create(@requestBody()user: User) {
+    public async create(@requestBody()user: User,next:NextFunction) {
         try {
             user.password = await this.hashService.getHashedPassword(user.password);
             let dbUser = await this.userService.create(user);
             let token = await this.jwtService.getToken({_id: dbUser['_id'], email: dbUser.email});
-            return this.json(getContent(201, 'Created', '', [{token: token, token_type: 'Bearer'}]), 201)
+            return this.json(getContent(CREATED, '', [{token: token, token_type: 'Bearer'}]), CREATED.code)
         } catch (e) {
-            return this.json(getContent(500, 'Internal Server Error', e.message, []), 500)
+            return this.json(getContent(SERVER_ERROR, e.message, []), SERVER_ERROR.code)
 
         }
     }
@@ -40,17 +43,25 @@ export class UserController extends BaseHttpController {
     @httpPost('/auth')
     public async auth(@requestBody() body: any) {
         try {
-
             let {email, password} = body;
             let user = await this.authService.authUser(email, password);
             if (user) {
                 let token = await this.jwtService.getToken({_id: user['_id'], email: user.email});
-                return this.json(getContent(200, 'Ok', '', [{token: token, token_type: 'Bearer'}]), 200)
+                return this.json(getContent(OK, '', [{token: token, token_type: 'Bearer'}]), OK.code)
             } else {
-                return this.json(getContent(401, 'Unauthorized', '', []), 401)
+                return this.json(getContent(UNAUTHORIZED, '', []), 401)
             }
         } catch (e) {
-            return this.json(getContent(500, 'Internal Server Error', e.message, []), 500)
+            return this.json(getContent(SERVER_ERROR, e.message, []), SERVER_ERROR.code)
+        }
+    }
+
+    @httpGet('', 'AuthMiddleware')
+    public async getUser(@requestBody() body: any) {
+        try {
+            return this.json(getContent(OK, '', [{user:body.user}]), OK.code)
+        } catch (e) {
+            return this.json(getContent(SERVER_ERROR, e.message, []), SERVER_ERROR.code)
         }
     }
 }

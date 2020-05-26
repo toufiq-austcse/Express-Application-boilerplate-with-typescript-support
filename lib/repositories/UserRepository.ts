@@ -14,4 +14,8 @@ export class UserRepository extends Repository<UserDocument, User> implements IU
     getByEmail(email: string): Promise<User[]> {
         return super.find({email}, 1)
     }
+
+    getByUserId(_id: string): Promise<User> {
+        return super.get(_id);
+    }
 }

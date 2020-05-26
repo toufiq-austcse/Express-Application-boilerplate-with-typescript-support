@@ -1,5 +1,6 @@
 import * as joi from 'joi'
 import getContent from "../shared/apiresponse";
+import {BAD_REQUEST} from "../shared/HttpStatusCodes";
 
 
 const validate = (schema) => {
@@ -11,7 +12,7 @@ const validate = (schema) => {
         } else {
             const {details} = error;
             const message = details.map(i => i.message).join(',');
-            res.status(400).json(getContent(400,'Bad Request',message,[]))
+            res.status(400).json(getContent(BAD_REQUEST,message,[]))
         }
     }
 }
