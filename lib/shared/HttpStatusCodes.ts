@@ -1,6 +1,6 @@
 export interface HttpStatus {
-    status: string,
-    code: number
+    status: string;
+    code: number;
 }
 
 export const OK: HttpStatus = {

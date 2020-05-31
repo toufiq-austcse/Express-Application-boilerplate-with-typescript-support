@@ -1,3 +1,3 @@
 export interface IShortnerService {
-    getShortUrl(url: string): Promise<String>;
+    getShortUrl(url: string): Promise<string>;
 }

@@ -7,13 +7,13 @@
  * Feature: #Enter feature name here
  # Enter feature description here
  */
-import {ILinkService} from "./base/ILinkService";
-import {User} from "../models/User";
-import {Link} from "../models/Link";
-import {inject} from "inversify";
-import {LinkRepository} from "../repositories/LinkRepository";
-import {ILinkRepository} from "../repositories/base/ILinkRepository";
-import {provide} from "inversify-binding-decorators";
+import {ILinkService} from './base/ILinkService';
+import {User} from '../models/User';
+import {Link} from '../models/Link';
+import {inject} from 'inversify';
+import {LinkRepository} from '../repositories/LinkRepository';
+import {ILinkRepository} from '../repositories/base/ILinkRepository';
+import {provide} from 'inversify-binding-decorators';
 
 @provide(LinkService)
 export class LinkService implements ILinkService {

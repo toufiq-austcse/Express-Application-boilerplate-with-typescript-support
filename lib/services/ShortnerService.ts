@@ -8,10 +8,10 @@
  # Enter feature description here
  */
 
-import {IShortnerService} from "./base/IShortnerService";
+import {IShortnerService} from './base/IShortnerService';
 
 export class ShortnerService implements IShortnerService {
-    getShortUrl(url: string): Promise<String> {
+    getShortUrl(url: string): Promise<string> {
        return null;
     }
 

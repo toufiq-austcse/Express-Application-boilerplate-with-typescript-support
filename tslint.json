@@ -5,18 +5,10 @@
     ],
     "jsRules": {},
     "rules": {
-        "member-ordering": false,
-        "quotemark": false,
-        "no-var-requires": false,
+        "quotemark": [true, "single"],
+        "no-var-requires": true,
         "triple-equals": true,
-        "prefer-switch": false,
         "no-invalid-template-strings": true,
-        "no-invalid-this": false,
-        "space-before-function-paren": false,
-        "object-literal-sort-keys": false,
-        "ordered-imports": false,
-        "comment-format": false,
-        "trailing-comma": false,
         "no-shadowed-variable": false,
         "max-line-length": false,
         "only-arrow-functions": false,
@@ -26,14 +18,14 @@
         "no-empty": false,
         "max-classes-per-file": false,
         "interface-name": false,
-        "no-switch-case-fall-through": true,
         "one-variable-per-declaration": true,
         "curly": true,
+        "no-string-literal":false,
         "semicolon": [
             true,
             "always"
         ],
-        "object-literal-key-quotes": [true, "consistent-as-needed"],
+       
         "prefer-const": true,
         "no-unused-expression": false
     },

@@ -8,8 +8,8 @@
  # Enter feature description here
  */
 import * as bcrypt from 'bcrypt';
-import {provide} from "inversify-binding-decorators";
-import {IHashService} from "./base/IHashService";
+import {provide} from 'inversify-binding-decorators';
+import {IHashService} from './base/IHashService';
 
 @provide(HashService)
 export class HashService implements IHashService {

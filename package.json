@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "dev": "ts-node ./lib/bootstrap.ts",
     "start": "node ./dist/server.js --host=0.0.0.0",

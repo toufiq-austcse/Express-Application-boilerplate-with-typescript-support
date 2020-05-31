@@ -1,6 +1,6 @@
 import {Document, FilterQuery, Model, Types} from 'mongoose';
 import 'reflect-metadata';
-import {injectable} from "inversify";
+import {injectable} from 'inversify';
 
 export type Query<T> = FilterQuery<T>;
 
@@ -117,7 +117,7 @@ export abstract class Repository<T extends Document, K> implements IRepository<T
     }
 
     public createMany(_data: K[]): Promise<K[]> {
-        throw new Error("Method not implemented.");
+        throw new Error('Method not implemented.');
     }
 
     public async remove(id: string): Promise<void> {

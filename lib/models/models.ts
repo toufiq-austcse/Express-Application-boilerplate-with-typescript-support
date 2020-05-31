@@ -1,11 +1,11 @@
-import {UserModel} from "./User";
-import {LinkModel} from "./Link";
-import {TYPES} from "../types/type";
+import {UserModel} from './User';
+import {LinkModel} from './Link';
+import {TYPES} from '../types/type';
 
 /* Register your models here */
-let models = [
+const models = [
     {type: TYPES.UserModel, model: UserModel},
     {type: TYPES.LinkModel, model: LinkModel},
 ];
 
-export default models
+export default models;

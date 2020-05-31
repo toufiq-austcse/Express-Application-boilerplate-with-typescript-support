@@ -7,12 +7,12 @@
  * Feature: #Enter feature name here
  # Enter feature description here
  */
-import {ILinkRepository} from "./base/ILinkRepository";
-import {Repository} from "./base/repository";
-import {Link, LinkDocument} from "../models/Link";
-import {provide} from "inversify-binding-decorators";
-import {inject} from "inversify";
-import {TYPES} from "../types/type";
+import {ILinkRepository} from './base/ILinkRepository';
+import {Repository} from './base/repository';
+import {Link, LinkDocument} from '../models/Link';
+import {provide} from 'inversify-binding-decorators';
+import {inject} from 'inversify';
+import {TYPES} from '../types/type';
 
 @provide(LinkRepository)
 export class LinkRepository extends Repository<LinkDocument, Link> implements ILinkRepository {

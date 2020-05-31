@@ -8,9 +8,9 @@
  # Enter feature description here
  */
 import * as jwt from 'jsonwebtoken';
-import {provide} from "inversify-binding-decorators";
-import {IJwtService} from "./base/IJwtService";
-import {JWT_KEY} from "../environments";
+import {provide} from 'inversify-binding-decorators';
+import {IJwtService} from './base/IJwtService';
+import {JWT_KEY} from '../environments';
 
 @provide(JwtService)
 export class JwtService implements IJwtService {

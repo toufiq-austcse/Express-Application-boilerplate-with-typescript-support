@@ -8,17 +8,17 @@
  # Enter feature description here
  */
 import * as uniqid from 'uniqid';
-import {BaseHttpController, controller, httpPost, requestBody} from "inversify-express-utils";
-import {linkValidator} from "../validators/validate";
-import validate from "../validators";
-import * as urlValidator from 'valid-url'
-import getContent from "../shared/apiresponse";
-import {BAD_REQUEST, OK} from "../shared/HttpStatusCodes";
-import {BASE_URL} from "../environments";
-import {inject} from "inversify";
-import {LinkService} from "../services/LinkService";
-import {ILinkService} from "../services/base/ILinkService";
-import {TYPES} from "../types/type";
+import {BaseHttpController, controller, httpPost, requestBody} from 'inversify-express-utils';
+import {linkValidator} from '../validators/validate';
+import validate from '../validators';
+import * as urlValidator from 'valid-url';
+import getContent from '../shared/apiresponse';
+import {BAD_REQUEST, OK} from '../shared/HttpStatusCodes';
+import {BASE_URL} from '../environments';
+import {inject} from 'inversify';
+import {LinkService} from '../services/LinkService';
+import {ILinkService} from '../services/base/ILinkService';
+import {TYPES} from '../types/type';
 
 @controller('/api/v1/link')
 export class LinkController extends BaseHttpController {
@@ -28,17 +28,17 @@ export class LinkController extends BaseHttpController {
 
     @httpPost('', validate(linkValidator), TYPES.AuthMiddleware)
     public async createLink(@requestBody() body: any) {
-        let {url, user} = body;
+        const {url, user} = body;
         if (urlValidator.isHttpUri(url) || urlValidator.isHttpsUri(url)) {
-            let uniqId = uniqid();
+            const uniqId = uniqid();
             await this.linkService.create({
-                url: url,
+                url,
                 unique_id: uniqId,
                 user_id: user['_id']
             });
-            return this.json(getContent(OK, 'Ok', [{base_url: BASE_URL, unique_id: uniqId}]), OK.code)
+            return this.json(getContent(OK, 'Ok', [{base_url: BASE_URL, unique_id: uniqId}]), OK.code);
         } else {
-            return this.json(getContent(BAD_REQUEST, 'Invalid Url', []), BAD_REQUEST.code)
+            return this.json(getContent(BAD_REQUEST, 'Invalid Url', []), BAD_REQUEST.code);
         }
     }
 }
